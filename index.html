@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  
   <title>Clone Fernanda Slovinski</title>
+  <script src="./js/script.js"></script>
 </head>
 <body>
   <!-- header>img+div.right>ul>li*4>a{texto}// div class=""-->
@@ -98,7 +98,7 @@
     <div class="center container-tratamentos">
       <h2>TRATAMENTOS</h2>
       <div class="all-columns">
-        <div class="column-tratamentos">
+        <div class="column-tratamentos" id="col1">
           <div class="indiv-tratamento">
             <h2>Facetas ou lentes de contato dental</h2>
             <p>Geralmente são recomendas por motivos estéticos e envolvem apenas a face frontal dos dentes, estão cada vez mais finas e necessitam pouco desgaste. São utilizadas nos casos de dentes manchados ou restaurados, quando o paciente quer melhorar a estética.</p>
@@ -112,7 +112,7 @@
 				    <p>Qualquer pessoa pode ter seus dentes naturais clareados. Em alguns casos, quando o  paciente tem muitas restaurações e/ou próteses poderá ser necessário associar outros tratamentos para que o resultado estético seja satisfatório. </p>
           </div>
         </div><!--column-tratamentos-->
-        <div class="column-tratamentos">
+        <div class="column-tratamentos" id="col2">
           <div class="indiv-tratamento">
             <h2>Halitose (mau hálito)</h2>
 				    <p>É uma doença que acomete mais de 40% da população, mas a maioria das pessoas  não sentem a sua halitose. Quase 90% são de origem bucal, mas também pode ser um sinal de alguma desordem ou doença sistêmica. Existe SIM tratamento e nós podemos ajudar! </p>
@@ -126,7 +126,7 @@
 				    <p>As próteses fixadas sobre os implantes tem como maior vantagem o fato de não se soltarem durante a mastigação propiciando maior conforto, segurança e eficácia além de maior retenção e estética em relação às próteses móveis.</p>
           </div>
         </div><!--column-tratamentos-->
-        <div class="column-tratamentos">
+        <div class="column-tratamentos" id="col3">
           <div class="indiv-tratamento">
             <h2>Prótese Fixa</h2>
 				    <p>É o método mais utilizado para se devolver o conforto e estética para os pacientes que necessitam substituir um ou mais dentes. Atualmente, em sua maioria, são feitas em porcelana pura.</p>
@@ -142,23 +142,36 @@
         </div><!--column-tratamentos-->
       </div><!--all-columns-->
       <div class="tratamentos-selector">
-        <div class="selector"></div>
-        <div class="selector"></div>
-        <div class="selector"></div>
+        <div id="seletor1" class="selector" onclick="trocar_tratamento('seletor1')"></div>
+        <div id="seletor2" class="selector" onclick="trocar_tratamento('seletor2')"></div>
+        <div id="seletor3" class="selector" onclick="trocar_tratamento('seletor3')"></div>
       </div>
     </div><!--center container-tratamentos-->
   </section><!--tratamentos-->
 
   <section class="depoimentos">
     <h2>depoimentos</h2>
-    <p class="depo-desc">“Estrutura e atendimento excepcionais. Adorei o atendimento da Dra. Fernanda, excelente profissional.”</p>
-    <div class="user-depo">
-      <img src="./images/profile-cartoon.jpg" alt="">
-      <p class="depo-username">Mario Augusto Santos</p>
-    </div>
+
+
+    <div id="depo1" class="depo1">
+      <p class="depo-desc">“Estrutura e atendimento excepcionais. Adorei o atendimento da Dra. Fernanda, excelente profissional.”</p>
+      <div class="user-depo">
+        <img src="./images/profile-cartoon.jpg" alt="imagem de perfil de usuario que deu depoimento">
+        <p class="depo-username">Joao Augusto Santos</p>
+      </div><!--user-depo-->
+    </div><!--depo1-->
+     
+     <div id="depo2" class="depo2">
+      <p class="depo-desc">“Uma pessoa incrivel, otimo atendimento, vou levar toda minha familia</p>
+      <div class="user-depo">
+        <img src="./images/profile-cartoon-2.jpg" alt="">
+        <p class="depo-username">Maria Augusta Santos</p>
+      </div><!--user-depo-->
+    </div><!--depo2-->
+
     <div class="depo-selector">
-      <div class="selector"></div>
-      <div class="selector"></div>
+      <div class="selector" id='select1'  onclick="trocar_depo('select1')"></div>
+      <div class="selector"  id='select2'onclick="trocar_depo('select2')"></div>
     </div>
   </section>
 
@@ -222,6 +235,33 @@
             </form>
         </section><!-- contato -->
         
+        <footer>
+          <section class="contato-empresa">
+            <div class="telefone">
+              <h2>Telefone</h2>
+              <p>consultas: (48) 3223-3083</p>
+              <p>whatsapp: (48) 99961-5530</p>
+            </div><!-- telefone -->
+            <div class="hora">
+              <h2>Horários</h2>
+              <p>Segunda a sexta:</p>
+              <p>08:00 - 12:00 14:00 - 18:00</p>
+            </div><!-- hora -->
+            <div class="endereco">
+              <h2>Endereço</h2>
+              <p>Av. Trompowsky, 291. Torre 1 sala 103</p>
+              <p>Cep 88015-300 - Florianópolis, SC</p>
+            </div>
+          </section><!-- contato-empresa -->
+
+          <section class="copyright">
+            <span class="simbolo">&lt!--</span>
+            <span> RO</span>
+            <span class="simbolo">.</span>
+            <span>TECH </span>
+            <span class="simbolo">--&gt</span>
+          </section><!--copyright-->
+        </footer>
 
 </body>
 </html>

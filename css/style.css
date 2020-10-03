@@ -5,9 +5,12 @@
 	font-family: "Montserrat", sans-serif;
 }
 
-:root{
+/* :root{
 	--cor-bg-principal: pink;
-}
+} 
+
+border: 1px solid var(--cor-bg-principal);
+*/
 
 .center{
 	width: 100%;
@@ -26,7 +29,7 @@ html,body{
 	width: 16px;
 	height: 16px;
 	border-radius: 8px;
-	background-color: #d8d8d8; /*#688293*/
+	background-color: #d8d8d8; /*#688293 rgb(104,130,147)*/
 	margin: auto 7px;
 }
 
@@ -245,13 +248,13 @@ section.profissional  div.desc-prof ul li p{
 .video .center{
 	/* border: 2px solid yellow; */
 	width: 45%;
-	height: 350px;
+	height: 25vw; 
 	text-align: center;
 }
 
 .video iframe{
-	width: 100%;
-	height: 100%;
+	width: 100%; 
+	height: 100%; 
 }
 
 
@@ -314,12 +317,26 @@ section.profissional  div.desc-prof ul li p{
 
 /************* DEPOIMENTOS ****************/
 section.depoimentos{
+	margin: 50px 0;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items:center;
-	margin: 50px 0;
 }
+
+section.depoimentos .depo1,
+section.depoimentos .depo2{
+	width: 80%;
+	display:flex;
+	align-items:center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+section.depoimentos .depo2{
+	display:none;
+}
+
 
 section.depoimentos h2{
 	text-transform: uppercase;
@@ -329,6 +346,7 @@ section.depoimentos h2{
 }
 
 section.depoimentos p.depo-desc{
+	min-height: 100px;
 	width: 70%;
 	text-align:center;
 	color:#b4b4b4;
@@ -500,6 +518,57 @@ section.contato form p.obrigatorio{
 }
 
 
+/******* CONTATO-EMPRESA *******/
+footer section.contato-empresa{
+	width: 100%;
+	background-color: #688293;
+	color: white;
+	display:flex;
+	justify-content:center;
+	padding: 50px 0;
+	align-items:center;
+	
+}
+
+footer section.contato-empresa h2{
+	font-size: 20px;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+
+footer section.contato-empresa p{
+	margin: 2px 0;
+}
+
+
+footer section.contato-empresa .telefone, 
+footer section.contato-empresa .hora, 
+footer section.contato-empresa .endereco{
+margin-right: 30px;
+}
+
+
+	/****** COPYRIGHT *******/
+section.copyright{
+	background-color: #576975;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+section.copyright span{
+	color: white;
+	font-size: 18px;
+	padding: 20px 0;
+	font-weight: 900;
+}
+
+section.copyright span.simbolo {
+	color: black;
+	font-weight: bold;
+	font-size: 22px;
+}
+
 /******* MEDIA <= 1050px *******/
 @media screen and (max-width: 1050px){
 	
@@ -530,6 +599,11 @@ section.contato form p.obrigatorio{
 		display: flex;
 	}
 	
+	/**** VIDEO *****/
+	.video .center{
+		width: 60%;
+		height: 34vw; 
+	}
 }
 
 /******* MEDIA <= 850px *******/
@@ -549,11 +623,6 @@ section.contato form p.obrigatorio{
 		min-width: 380px;	
 	}
 
-	.video .center{
-		width: 55%;
-		height: 260px;
-	}
-
 
 	/************* PROFISSIONAL ****************/
 	section.profissional{
@@ -567,22 +636,39 @@ section.contato form p.obrigatorio{
 		text-align: center;
 	}	
 
+	/**** VIDEO *****/
+	.video .center{
+		width: 75%;
+		height: 42vw; 
+	} 
+
 	/********** SOCIAL ************/
 	.social-fotos .indiv-foto:nth-child(1),
 	.social-fotos .indiv-foto:nth-child(2),
 	.social-fotos .indiv-foto:nth-child(3){
 		width: calc((100%/3) - 5px);
-		min-width: calc((100%/3) - 5px);;
+		min-width: calc((100%/3) - 5px);
 		height: 35vw;
 		min-height: none;
 		max-height: none; 
-		/* border: 5px solid var(--cor-bg-principal); */
 	}
+
 	.social-fotos .indiv-foto:nth-child(1n + 4){
 		display: none;
 	}
 
-
+	/****** CONTATO-EMPRESA *******/
+	footer section.contato-empresa{
+		flex-direction:column;
+	}
+	
+	footer section.contato-empresa .telefone, 
+	footer section.contato-empresa .hora,
+	footer section.contato-empresa .endereco{
+		text-align:center;
+		margin-top: 20px;
+		margin-right: 0;
+	}
 }
 
 /******* MEDIA <= 770px *******/
@@ -600,20 +686,14 @@ section.contato form p.obrigatorio{
 	/********* DEPOIMENTOS ********/
 	section.depoimentos p.depo-desc{
 		width: 100%;
-	}
-
-	/****** SOCIAL *******/
-	
+	}	
 	
 	
 	/****** CONTATO *******/
 	section.contato form{
 		width: 50%;
 	}
-
 }
-
-
 
 /******* MEDIA <= 480px *******/
 @media screen and (max-width: 480px) {
@@ -635,10 +715,10 @@ section.contato form p.obrigatorio{
 	.column-tratamentos:nth-child(2) {
 		display: none;
 	}	
+
 	.tratamentos-selector > .selector:nth-child(3) {
 		display: block;
 	}
-	
 	
 	/********* DEPOIMENTOS ********/
 	section.depoimentos div.user-depo{
@@ -649,6 +729,15 @@ section.contato form p.obrigatorio{
 
 /******* MEDIA <= 400px *******/
 @media screen and (max-width: 400px) {
+
+	header nav.center{
+		padding: 0 10px;
+	}
+
+	header nav.center div.right img{
+		top: 20px;
+		right: 10px;
+	}
 	
 	/**** SERVICO ****/
 	.indiv-servico:nth-child(1),
@@ -663,10 +752,10 @@ section.contato form p.obrigatorio{
 	}
 	
 	/***** VIDEO ******/
-	.video .center{
+	/* .video .center{
 		width: 90%;
 		height: 200px;
-	}
+	} */
 
 	/****** TRATAMENTO ******/
 	.container-tratamentos{
