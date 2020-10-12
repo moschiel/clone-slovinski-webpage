@@ -1,7 +1,7 @@
 let menuIcon = $('.menu-icon');
 let menuMobile = $('.mobile-menu');
 
-
+//evento para mostrar/esconder o menu mobile
 menuIcon.click(function(){ 
   if(menuMobile.css('display') != 'none')
     menuMobile.slideUp();  
@@ -13,6 +13,17 @@ $(window).resize(function () {
   if($(window).width() > 1050 && menuMobile.css('display') != 'none') {
     menuMobile.css('display', 'none');
   }
+});
+
+//envento para scroll automatico ao clicar em link do menu
+$('nav a').click(function(e){
+  e.preventDefault();
+
+  var section_id = $(this).attr('href');
+  var offsetPixels = $(section_id).offset().top;
+  $('html, body').animate({scrollTop:offsetPixels}, 700);
+
+  //return false; //pra nao redirecionar a pagina por ter clica em um link
 });
 
 
