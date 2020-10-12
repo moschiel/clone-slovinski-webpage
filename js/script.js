@@ -1,3 +1,21 @@
+let menuIcon = $('.menu-icon');
+let menuMobile = $('.mobile-menu');
+
+
+menuIcon.click(function(){ 
+  if(menuMobile.css('display') != 'none')
+    menuMobile.slideUp();  
+  else
+    menuMobile.slideDown();
+});
+
+$(window).resize(function () { 
+  if($(window).width() > 1050 && menuMobile.css('display') != 'none') {
+    menuMobile.css('display', 'none');
+  }
+});
+
+
 const cor_ativo = "#688293";
 const cor_inativo = "#d8d8d8";
 

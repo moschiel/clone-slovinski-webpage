@@ -67,6 +67,34 @@ header nav.center .right ul.menu li a{
 	text-transform: uppercase;
 }
 
+/* <!--MENU-MOBILE --> */
+.mobile-menu {
+	display: none;
+  width: 100%;
+  padding-top: 12px;
+	position: absolute;
+	left: 0px;
+  top: 60px;
+}
+
+.mobile-menu li {
+  background-color: white;
+  text-align: center;
+  /* transition: 1s; */
+}
+
+.mobile-menu li:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.mobile-menu a {
+  padding: 10px 0;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 14px;
+	color: #b4b4b4;
+}
+
 
 /******** MOSAICO **********/
 .mosaico {
@@ -582,22 +610,8 @@ section.copyright span.simbolo {
 	}
 	
 	header nav.center div.right .menu{
-		position: absolute;
-		left: 0;
-		margin-top: 36px;
-		display: flex;
-		flex-direction: column;
-		background-color: white;
-		padding: 10px 0;
-	}
-	
-	header nav.center div.right .menu li a{
-		padding: 2px 0;
-		flex-direction: column;
-		text-align: center;
-		text-transform: capitalize;
-		display: flex;
-	}
+		display: none;
+	} 
 	
 	/**** VIDEO *****/
 	.video .center{
