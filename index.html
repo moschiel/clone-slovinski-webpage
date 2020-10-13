@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/slick.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <title>Clone Fernanda Slovinski</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/slick.js"></script>
   <script src="./js/script.js" defer></script>
 </head>
 <body>
@@ -149,9 +151,9 @@
         </div><!--column-tratamentos-->
       </div><!--all-columns-->
       <div class="tratamentos-selector">
-        <div id="seletor1" class="selector" onclick="trocar_tratamento('seletor1')"></div>
-        <div id="seletor2" class="selector" onclick="trocar_tratamento('seletor2')"></div>
-        <div id="seletor3" class="selector" onclick="trocar_tratamento('seletor3')"></div>
+        <div id="seletor1" class="selector" ></div>
+        <div id="seletor2" class="selector" ></div>
+        <div id="seletor3" class="selector" ></div>
       </div>
     </div><!--center container-tratamentos-->
   </section><!--tratamentos-->
@@ -160,7 +162,7 @@
     <h2>depoimentos</h2>
 
 
-    <div id="depo1" class="depo1">
+    <div id="depo1" class="depo1 depo">
       <p class="depo-desc">“Estrutura e atendimento excepcionais. Adorei o atendimento da Dra. Fernanda, excelente profissional.”</p>
       <div class="user-depo">
         <img src="./images/profile-cartoon.jpg" alt="imagem de perfil de usuario que deu depoimento">
@@ -168,7 +170,7 @@
       </div><!--user-depo-->
     </div><!--depo1-->
      
-     <div id="depo2" class="depo2">
+     <div id="depo2" class="depo2 depo">
       <p class="depo-desc">“Uma pessoa incrivel, otimo atendimento, vou levar toda minha familia</p>
       <div class="user-depo">
         <img src="./images/profile-cartoon-2.jpg" alt="">
@@ -177,8 +179,8 @@
     </div><!--depo2-->
 
     <div class="depo-selector">
-      <div class="selector" id='select1'  onclick="trocar_depo('select1')"></div>
-      <div class="selector"  id='select2'onclick="trocar_depo('select2')"></div>
+      <div class="selector" id='select1'></div>
+      <div class="selector" id='select2'></div>
     </div>
   </section>
 
