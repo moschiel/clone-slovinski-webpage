@@ -409,35 +409,6 @@ section.depoimentos div.depo-selector .selector:nth-child(1){
 	background-size: 100% auto;
 }
 
-.social-fotos .indiv-foto:nth-child(1) {
-	background-image: url("../images/mosaico-1.jpg");
-}
-.social-fotos .indiv-foto:nth-child(2) {
-	background-image: url("../images/mosaico-2.jpg");
-}
-.social-fotos .indiv-foto:nth-child(3) {
-	background-image: url("../images/mosaico-3.jpg");
-}
-.social-fotos .indiv-foto:nth-child(4) {
-	background-image: url("../images/mosaico-4.jpg");
-}
-.social-fotos .indiv-foto:nth-child(5) {
-	background-image: url("../images/mosaico-5.jpg");
-}
-.social-fotos .indiv-foto:nth-child(6) {
-	background-image: url("../images/mosaico-6.jpg");
-}
-.social-fotos .indiv-foto:nth-child(7) {
-	background-image: url("../images/mosaico-7.jpg");
-}
-.social-fotos .indiv-foto:nth-child(8) {
-	background-image: url("../images/mosaico-8.jpg");
-}
-.social-fotos .indiv-foto:nth-child(9) {
-	background-image: url("../images/mosaico-9.jpg");
-}
-
-
 /******* CONTATO *******/
 
 section.contato{

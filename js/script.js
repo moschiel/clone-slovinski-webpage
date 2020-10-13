@@ -163,3 +163,14 @@ $(function() {
 
 })
 
+/******************** MOSAICO **********************/
+$(function() {
+   //carrega fotos no mosaico
+   let mosaicoSocialFotos = $('.social-fotos');
+   for(let i=1; i<9;) {
+      mosaicoSocialFotos.append(
+       `<div class="indiv-foto" style="background-image:url('./images/mosaico-${i++}.jpg')"></div>`
+      );  
+   }
+});
+
