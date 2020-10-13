@@ -99,72 +99,30 @@ header nav.center .right ul.menu li a{
 /******** MOSAICO **********/
 .mosaico {
 	width: 100%;
-	/* border: 2px solid red; */
+	border: 2px solid red;
 	margin-top: 20px;
 }
 .mosaico-fotos {
-	/* border: 2px solid blue; */
+	border: 2px solid blue;
 	width: 100%;	
+	display: flex;
 }
 
-.mosaico1, 
-.mosaico2 {
-	/* border: 2px solid orange; */
+.mosaico-couple {
+	border: 2px solid black;
 	width: 100%;
-	display: flex;
-	align-items: center; 
-	justify-content: space-around;
-	/* COLOCAR ISSO DE VOLTA PARA JAVASCRIPT*/
-	/* min-width: 1200px; */
-}
-.mosaico1{
-	margin-bottom: 10px;
+	padding: 5px;
+	/* width: calc((100%/6) - 10px); */
+	/* min-width: calc((100%/6) - 10px); */
 }
 
 .indiv-foto {
-	/* border: 2px solid yellow; */
-	width: calc((100%/6) - 10px);
-	min-width: calc((100%/6) - 10px);;
-	height: 200px;
+	border: 2px solid yellow;
+	/* height: 200px; */
+	height: 15vw;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% auto;
-}
-.mosaico1 .indiv-foto:nth-child(1) {
-	background-image: url("../images/mosaico-1.jpg");
-}
-.mosaico1 .indiv-foto:nth-child(2) {
-	background-image: url("../images/mosaico-2.jpg");
-}
-.mosaico1 .indiv-foto:nth-child(3) {
-	background-image: url("../images/mosaico-3.jpg");
-}
-.mosaico1 .indiv-foto:nth-child(4) {
-	background-image: url("../images/mosaico-4.jpg");
-}
-.mosaico1 .indiv-foto:nth-child(5) {
-	background-image: url("../images/mosaico-5.jpg");
-}
-.mosaico1 .indiv-foto:nth-child(6) {
-	background-image: url("../images/mosaico-6.jpg");
-}
-.mosaico2 .indiv-foto:nth-child(1) {
-	background-image: url("../images/mosaico-7.jpg");
-}
-.mosaico2 .indiv-foto:nth-child(2) {
-	background-image: url("../images/mosaico-8.jpg");
-}
-.mosaico2 .indiv-foto:nth-child(3) {
-	background-image: url("../images/mosaico-9.jpg");
-}
-.mosaico2 .indiv-foto:nth-child(4) {
-	background-image: url("../images/mosaico-10.jpg");
-}
-.mosaico2 .indiv-foto:nth-child(5) {
-	background-image: url("../images/mosaico-11.jpg");
-}
-.mosaico2 .indiv-foto:nth-child(6) {
-	background-image: url("../images/mosaico-12.jpg");
 }
 
 /************* SERVCOS ****************/

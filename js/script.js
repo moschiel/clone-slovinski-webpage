@@ -1,3 +1,4 @@
+/************* MENU *********************/
 let menuIcon = $('.menu-icon');
 let menuMobile = $('.mobile-menu');
 
@@ -26,6 +27,7 @@ $('nav a').click(function(e){
   //return false; //pra nao redirecionar a pagina por ter clica em um link
 });
 
+/******************** TRATAMENTO **********************/
 //evento para trocar tratamento ao clicar nos seletores
 const cor_ativo = "#688293";
 const cor_inativo = "#d8d8d8";
@@ -55,6 +57,7 @@ seletores.click( (e) => {
   }
 });
 
+/******************** DEPOIMENTOS **********************/
 //evento para trocar depoimento ao clicar nos seletores
 var seletoresDepo = $('.depo-selector .selector');
 seletoresDepo.click((e) => {
@@ -70,7 +73,18 @@ seletoresDepo.click((e) => {
 
 
 
-/************* SLICK jQuery ******************* */
+/******************** MOSAICO **********************/
 $(function() {
-  //$('.mosaico1').slick();
+  //carrega fotos no mosaico
+  let fotos = $('.mosaico-couple .indiv-foto');
+  fotos.each(function(index) {
+    fotos.eq(index).css('background-image', `url('./images/mosaico-${index+1}.jpg')`);
+  });
+
+  
+  // $('.mosaico1,.mosaico2').slick({
+  //   infinite: true,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1
+  // });
 })
