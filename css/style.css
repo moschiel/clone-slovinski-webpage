@@ -74,7 +74,8 @@ header nav.center .right ul.menu li a{
   padding-top: 12px;
 	position: absolute;
 	left: 0px;
-  top: 60px;
+	top: 60px;
+	z-index: 2;
 }
 
 .mobile-menu li {
@@ -132,6 +133,8 @@ header nav.center .right ul.menu li a{
 	width: 100%;
 	margin-top: -22px;
 	margin-bottom: 90px;
+	position: relative;
+	z-index: 1;
 }
 .servicos > .center {
 	/* border: 2px solid yellow; */
