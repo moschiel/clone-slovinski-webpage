@@ -1,13 +1,13 @@
 # clone-slovinski-webpage
-Clone of Doctor Fernanda Slovinski' web page to practice HTML/CSS
+Clone of Doctor Fernanda Slovinski' web page to practice HTML/CSS/jQuery
 
 ![](clone-image.PNG)
 
 ### Utility:
-- Pratice responsive design using HTML and CSS
+- Pratice responsive design using HTML, CSS and jQuery
 
 #### Material:
-- HTML, CSS
+- HTML, CSS, jQuery
 
 #### Tutorial:
 - Open terminal ( cmd, bash, etc... )
