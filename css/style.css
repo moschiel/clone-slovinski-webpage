@@ -99,17 +99,18 @@ header nav.center .right ul.menu li a{
 /******** MOSAICO **********/
 .mosaico {
 	width: 100%;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 	margin-top: 20px;
+	margin-bottom: 10px;
 }
 .mosaico-fotos {
-	border: 2px solid blue;
+	/* border: 2px solid blue; */
 	width: 100%;	
 	display: flex;
 }
 
 .mosaico-couple {
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	width: 100%;
 	padding: 5px;
 	/* width: calc((100%/6) - 10px); */
@@ -117,9 +118,9 @@ header nav.center .right ul.menu li a{
 }
 
 .indiv-foto {
-	border: 2px solid yellow;
-	/* height: 200px; */
-	height: 15vw;
+	/* border: 2px solid yellow; */
+	/* height: 15vw; setado via js */
+	/* max-height: 200px; */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% auto;
@@ -555,9 +556,15 @@ section.copyright span.simbolo {
 	font-size: 22px;
 }
 
+
+@media screen and (min-width: 1051px) {
+	.indiv-foto {
+		/* max-height: 200px; */
+	}
+}
 /******* MEDIA <= 1050px *******/
 @media screen and (max-width: 1050px){
-	
+
 	header nav.center div.right img{
 		display: block;
 		position: absolute;

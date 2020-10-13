@@ -76,15 +76,90 @@ seletoresDepo.click((e) => {
 /******************** MOSAICO **********************/
 $(function() {
   //carrega fotos no mosaico
-  let fotos = $('.mosaico-couple .indiv-foto');
-  fotos.each(function(index) {
-    fotos.eq(index).css('background-image', `url('./images/mosaico-${index+1}.jpg')`);
+  let mosaicoFotos = $('.mosaico-fotos');
+  for(let i=1; i<12; ) {
+    mosaicoFotos.append(
+      `<div class="mosaico-couple">
+        <div class="indiv-foto" style="background-image:url('./images/mosaico-${i++}.jpg')"></div>
+        <div class="indiv-foto" style="background-image:url('./images/mosaico-${i++}.jpg')"></div>
+      </div>`
+    );  
+  }
+  
+  //set slider do mosaico
+  mosaicoFotos.slick({
+    // dots: true,
+    infinite: true,
+    prevArrow: false,
+    nextArrow: false,
+    speed: 300,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
 
-  
-  // $('.mosaico1,.mosaico2').slick({
-  //   infinite: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1
-  // });
+  let fotos = $('.mosaico-fotos .indiv-foto');
+  let secondRowFotos = $('.mosaico-fotos .indiv-foto:nth-child(2)');
+  function setMosaicoSize() {
+    let width = $(window).width();
+    if(width > 300)
+      secondRowFotos.css('display', 'block');
+
+    if(width > 800) {
+      fotos.css('height','15vw');
+    }
+    else if(width > 600) {
+      fotos.css('min-height','17vw');
+    }
+    else if(width > 400) {
+      fotos.css('min-height','25vw');
+    }
+    else if(width > 300) {
+      fotos.css('min-height','36vw');
+    }
+    else {
+      fotos.css('min-height','75vw');
+      secondRowFotos.css('display', 'none');
+    }
+  }
+
+  setMosaicoSize();
+
+  $(window).resize(()=>{
+    setMosaicoSize();
+  });
+
 })
+
