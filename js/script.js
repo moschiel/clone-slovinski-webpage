@@ -133,19 +133,6 @@ $( function() {
     seletores.css('background-color', cor_inativo);
     seletores.eq(slideIndex).css('background-color', cor_ativo);
   });
-
-  //evento para trocar depoimento ao clicar nos seletores
-  // var seletoresDepo = $('.depo-selector .selector');
-  // seletoresDepo.click((e) => {
-  //   let depoimentos = $('.depo');
-  //   let seletorIndex = seletoresDepo.index($(e.target));
-
-  //   seletoresDepo.css('background-color', cor_inativo);
-  //   $(e.target).css('background-color', cor_ativo);
-
-  //   depoimentos.css('display', 'none');
-  //   depoimentos.eq(seletorIndex).css('display', 'flex');
-  // });
 })
 
 
