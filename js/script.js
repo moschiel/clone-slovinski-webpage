@@ -28,48 +28,125 @@ $('nav a').click(function(e){
 });
 
 /******************** TRATAMENTO **********************/
-//evento para trocar tratamento ao clicar nos seletores
 const cor_ativo = "#688293";
 const cor_inativo = "#d8d8d8";
 
-var seletores = $('.tratamentos-selector .selector');
-//const trocar_tratamento = (seletor) => {
-seletores.click( (e) => { 
-  let tratamentos = $('.column-tratamentos');
-  let seletorIndex = seletores.index($(e.target));
+$(function() {
 
-  seletores.css('background-color', cor_inativo);
-  $(e.target).css('background-color', cor_ativo);
+  let tratamentosContainer = $('.tratamentos .all-columns');
+  let selectorContainer = $(".tratamentos-selector");
+  let tratamentosColum =  $(".column-tratamentos");
 
-  //Se width maior que 480px, apenas dois seletores (dois tratamentos na tela)
-  if(screen.width > 480) {
-    tratamentos.css('display', 'block');
-    if(seletorIndex == 0) {
-      tratamentos.eq(2).css('display', 'none');
+  //carrega seletores dinamincamente
+  tratamentosColum.each( function(){
+    selectorContainer.append('<div class="selector"></div>');
+  });
+
+  let seletores = $('.tratamentos .selector');
+  
+  function setTratamentosDisplay() {
+    let width = $(window).width();
+
+    if(width <= 770){
+      seletores.css('display', 'block');
     }
-    else if(seletorIndex == 1) {
-      tratamentos.eq(0).css('display', 'none');
+    else{
+      seletores.css('display', 'none');
     }
   }
-  else { //Senao, se width <= 480px, tres seletores (um unico tratamento na tela)
-    tratamentos.css('display', 'none');
-    tratamentos.eq(seletorIndex).css('display', 'block');
-  }
-});
+
+  setTratamentosDisplay();
+
+  $(window).resize(()=>{
+    setTratamentosDisplay();
+  });
+
+  tratamentosContainer.slick({
+    // dots: true,
+    infinite: true,
+    prevArrow: false,
+    nextArrow: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+  tratamentosContainer.on('beforeChange', function (slick, currentSlide) {  
+    let slideIndex = tratamentosContainer.slick('slickCurrentSlide');
+    seletores.css('background-color', cor_inativo);
+    seletores.eq(slideIndex).css('background-color', cor_ativo);
+  });
+
+})
+
+
 
 /******************** DEPOIMENTOS **********************/
-//evento para trocar depoimento ao clicar nos seletores
-var seletoresDepo = $('.depo-selector .selector');
-seletoresDepo.click((e) => {
-  let depoimentos = $('.depo');
-  let seletorIndex = seletoresDepo.index($(e.target));
+$( function() {
+  let depos =  $(".depo");
+  let selectorContainer = $('.depoimentos .depo-selector');
 
-  seletoresDepo.css('background-color', cor_inativo);
-  $(e.target).css('background-color', cor_ativo);
+  //carrega seletores dinamincamente
+  depos.each( function(){
+    selectorContainer.append('<div class="selector"></div>');
+  });
 
-  depoimentos.css('display', 'none');
-  depoimentos.eq(seletorIndex).css('display', 'flex');
-});
+  let seletores = $('.depoimentos .selector')
+  
+  let deposContainer = $('.all-depos');
+  deposContainer.slick({
+    // dots: true,
+    infinite: true,
+    prevArrow: false,
+    nextArrow: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 700,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  deposContainer.on('beforeChange', function (slick, currentSlide) {  
+    let slideIndex = deposContainer.slick('slickCurrentSlide');
+    seletores.css('background-color', cor_inativo);
+    seletores.eq(slideIndex).css('background-color', cor_ativo);
+  });
+
+  //evento para trocar depoimento ao clicar nos seletores
+  // var seletoresDepo = $('.depo-selector .selector');
+  // seletoresDepo.click((e) => {
+  //   let depoimentos = $('.depo');
+  //   let seletorIndex = seletoresDepo.index($(e.target));
+
+  //   seletoresDepo.css('background-color', cor_inativo);
+  //   $(e.target).css('background-color', cor_ativo);
+
+  //   depoimentos.css('display', 'none');
+  //   depoimentos.eq(seletorIndex).css('display', 'flex');
+  // });
+})
 
 
 
@@ -92,7 +169,9 @@ $(function() {
     infinite: true,
     prevArrow: false,
     nextArrow: false,
-    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 700,
     slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [

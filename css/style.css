@@ -16,7 +16,6 @@ border: 1px solid var(--cor-bg-principal);
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1440px;
-	/* max-width: 1200px; */
 }
 
 html,body{
@@ -81,7 +80,6 @@ header nav.center .right ul.menu li a{
 .mobile-menu li {
   background-color: white;
   text-align: center;
-  /* transition: 1s; */
 }
 
 .mobile-menu li:hover {
@@ -102,7 +100,6 @@ header nav.center .right ul.menu li a{
 	width: 100%;
 	/* border: 2px solid red; */
 	margin-top: 20px;
-	/* margin-bottom: 10px; */
 }
 .mosaico-fotos {
 	/* border: 2px solid blue; */
@@ -114,14 +111,9 @@ header nav.center .right ul.menu li a{
 	/* border: 2px solid black; */
 	width: 100%;
 	padding: 5px;
-	/* width: calc((100%/6) - 10px); */
-	/* min-width: calc((100%/6) - 10px); */
 }
 
 .indiv-foto {
-	/* border: 2px solid yellow; */
-	/* height: 15vw; setado via js */
-	/* max-height: 200px; */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% auto;
@@ -146,7 +138,6 @@ header nav.center .right ul.menu li a{
 	width: 100%;
 	display: flex;
 	align-items: center;
-	/* height: 200px; */
 }
 
 .indiv-servico{
@@ -299,7 +290,7 @@ section.profissional  div.desc-prof ul li p{
 
 .tratamentos-selector > .selector{
 	margin: auto 7px;
-	display: none;
+	/* display: none; feito via javascript */
 }
 .tratamentos-selector > .selector:first-child{
 	background-color: #688293;
@@ -314,19 +305,19 @@ section.depoimentos{
 	align-items:center;
 }
 
+.all-depos{
+	width: 100%;
+	/* border: 1px solid red; */
+}
 section.depoimentos .depo1,
 section.depoimentos .depo2{
+	/* border: 1px solid black; */
 	width: 80%;
 	display:flex;
 	align-items:center;
 	flex-direction: column;
 	justify-content: center;
 }
-
-section.depoimentos .depo2{
-	display:none;
-}
-
 
 section.depoimentos h2{
 	text-transform: uppercase;
@@ -338,8 +329,13 @@ section.depoimentos h2{
 section.depoimentos p.depo-desc{
 	min-height: 100px;
 	width: 70%;
-	text-align:center;
+	display: flex;
+	align-items: center;
+	text-align: center;
 	color:#b4b4b4;
+	margin: 0 auto;
+	padding: 0 15%;
+	/* border: 1px solid yellow; */
 }
 
 section.depoimentos div.user-depo{
@@ -348,6 +344,7 @@ section.depoimentos div.user-depo{
 	align-items: center;
 	width: 50%;
 	padding: 10px 0;
+	margin: 0 auto;
 }
 
 section.depoimentos div.user-depo img{
@@ -531,11 +528,6 @@ section.copyright span.simbolo {
 }
 
 
-@media screen and (min-width: 1051px) {
-	.indiv-foto {
-		/* max-height: 200px; */
-	}
-}
 /******* MEDIA <= 1050px *******/
 @media screen and (max-width: 1050px){
 
@@ -626,20 +618,15 @@ section.copyright span.simbolo {
 
 /******* MEDIA <= 770px *******/
 @media screen and (max-width: 770px) {
-		/********* TRATAMENTOS ********/
-	.column-tratamentos:nth-child(3) {
-		display: none;
-	}
-
-	.tratamentos-selector > .selector:nth-child(1),
-	.tratamentos-selector > .selector:nth-child(2){
-		display: block;
-	}
 
 	/********* DEPOIMENTOS ********/
 	section.depoimentos p.depo-desc{
 		width: 100%;
 	}	
+
+	section.depoimentos div.user-depo{
+		width: 100%;
+	}
 	
 	
 	/****** CONTATO *******/
@@ -662,21 +649,6 @@ section.copyright span.simbolo {
 	
 	section.profissional div.desc-prof p{
 		font-size: 13px;
-	}
-
-	/********* TRATAMENTOS ********/
-	.column-tratamentos:nth-child(2) {
-		display: none;
-	}	
-
-	.tratamentos-selector > .selector:nth-child(3) {
-		display: block;
-	}
-	
-	/********* DEPOIMENTOS ********/
-	section.depoimentos div.user-depo{
-		flex-direction: column;
-		width: 100%;
 	}
 }
 
@@ -702,18 +674,6 @@ section.copyright span.simbolo {
 	.indiv-servico:nth-child(2){
 		min-width: 0px;	
 		width: 100%;
-	}
-	
-	/***** VIDEO ******/
-	/* .video .center{
-		width: 90%;
-		height: 200px;
-	} */
-
-	/****** TRATAMENTO ******/
-	.container-tratamentos{
-		padding-left: 10px;
-		padding-right: 10px;
 	}
 
 	/************* DEPOIMENTOS ****************/
